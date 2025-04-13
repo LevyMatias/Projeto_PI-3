@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Controle de Estoque</title>
+</head>
+
+<style>
+:root {
+    --azul-principal: #8ccbff;
+    --azul-hover: #8ccbffa2;
+    --azul-titulos: #3c9ae7;
+    --cor-de-fundo: #F3F3F3;
+}
+
+/* Define o fundo cinza e o texto preto */
+body {
+    background-color: var(--cor-de-fundo);
+    color: black; /* Texto preto */
+    height: 100vh; /* Altura total da viewport */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 300px;
+}
+
+.modal-content {
+    background-color: #8ccbff;
+    width: 300px;
+}
+
+.list-group-item {
+    background-color: #8ccbff;
+}
+.list-group-item:hover {
+    background-color:  #8ccbffa2;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.2s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    padding-right: 5%;
+    margin: 0;
+}
+
+button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 7%;
+    height: 30px;        
+}
+
+table {
+    margin: 0;
+}
+
+.table-group-divider {
+    color: #ffffff;   
+}
+</style>
+
+<!-- Barra de navegação superior -->
+<header>
+    <div class="head">
+        <nav class="navbar bg-outline-secondary shadow-sm navbar-light">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-flex justify-content-between align-items-center navbar-text gap-2 m-2">
+                        <span><a href="inicio.html" class="nav-link">Início</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <<!-- Modal Barra Lateral -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar menu"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Lista de itens do menu -->
+                        <ul class="list-group list-group-flush list-group-item-action active">
+                            <li class="list-group-item"><a href="inicio.html" class="nav-link" aria-label="Ir para a página inicial">Início</a></li>
+                            <li class="list-group-item"><a href="produtos.html" class="nav-link" aria-label="Ir para a página de produtos">Produtos</a></li>
+                            <li class="list-group-item"><a href="entradas.html" class="nav-link" aria-label="Ir para a página de entradas">Entradas</a></li>
+                            <li class="list-group-item"><a href="saidas.html" class="nav-link" aria-label="Ir para a página de saídas">Saídas</a></li>
+                            <li class="list-group-item"><a href="vendas.html" class="nav-link" aria-label="Ir para a página de vendas">Vendas</a></li>
+                            <li class="list-group-item"><a href="fabricantes.html" class="nav-link" aria-label="Ir para a página de fabricantes">Fabricantes</a></li>
+                            <li class="list-group-item"><a href="usuarios.html" class="nav-link" aria-label="Ir para a página de usuários">Usuários</a></li>
+                            <li class="list-group-item"><a href="index.html" class="nav-link" aria-label="Sair da sessão">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Botões -->
+<body>
+    <!-- Título da página -->
+    <div class="position-relative m-4">
+        <h2 class="titulo">Usuários</h2>
+    </div>
+    
+    <!-- Botão "Novo" -->
+    <div class="button-container">
+        <button type="button" class="btn btn-primary" 
+        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .2rem; --bs-btn-font-size: 1.0rem;">
+            <a href="cadusuarios.html" class="text-white text-decoration-none">Novo</a>
+        </button>
+    </div>
+
+    <!-- Tabela de produtos -->
+    <div class="position-relative m-5">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="min_col">Usuário</th>
+                        <th scope="col" class="min_col">Nome</th>
+                        <th scope="col" class="min_col">Ações</th> <!-- Coluna para o botão de edição -->
+                    </tr>
+                </thead>
+                <!-- <tbody class="table-group-divider-shadow-lg">
+                    <tr>
+                        <td>usuário1</td>
+                        <td>Nome do Usuário 1</td>
+                        <td><button type="button" class="btn btn-warning">Editar</button></td>
+                    </tr>
+                </tbody> -->
+            </table>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS -->
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

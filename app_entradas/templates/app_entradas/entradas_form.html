@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% if entrada %}Editar Entrada #{{ entrada.id }}{% else %}Nova Entrada{% endif %}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0">{% if entrada %}Editar Entrada #{{ entrada.id }}{% else %}Registrar Nova Entrada{% endif %}</h3>
+            <a href="{% if entrada %}{% url 'entrada-detail' entrada.id %}{% else %}{% url 'entrada-list' %}{% endif %}" class="btn btn-light">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form.data_entrada|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.produto|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.codigo_produto|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.fabricante|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.quantidade|as_crispy_field }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            {{ form.tipo_embalagem|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.qtd_embalagem|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.custo_unitario|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.valor_pago|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.observacoes|as_crispy_field }}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-3 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Controle de Estoque Login</title>
+</head>
+
+<style>
+:root {
+    --azul-principal: #8ccbff;
+    --azul-hover: #8ccbffa2;
+    --azul-titulos: #3c9ae7;
+    --cor-de-fundo: #F3F3F3;
+}
+
+/* Define o fundo cinza e o texto preto */
+body {
+    background-color: var(--cor-de-fundo);
+    color: black; /* Texto preto */
+    height: 100vh; /* Altura total da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    color: #8CCBFF;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    width: 200px;
+}
+</style>
+
+<body class="d-flex align-items-center">
+
+    <main class="w-100 m-auto form-container">
+        <!-- Cabeçalho centralizado com o nome BAZAR SONINHA -->
+        <h1 class="fw-bold">Bazar Soninha</h1>
+        <div class="container text-center mb-3">
+            <h3>Controle de Estoque</h3>
+        </div>
+
+        <form>
+            <div class="form-floating mb-1">
+                <input type="text" class="form-control" id="usuario" placeholder="Usuário" aria-label="Usuário" required />
+                <label for="usuario">Usuário</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="senha" placeholder="Senha" aria-label="Senha" required />
+                <label for="senha">Senha</label>
+            </div>
+
+            <div class="button-container">
+                <a href="inicio.html" aria-label="Entrar no sistema">
+                    <button type="button" class="btn btn-primary w-100 py-2">Login</button>
+                </a> 
+            </div>
+        </form>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
+</html>

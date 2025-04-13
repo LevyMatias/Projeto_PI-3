@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Detalhe da Entrada #{{ entrada.id }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0">Detalhes da Entrada #{{ entrada.id }}</h3>
+            <a href="{% url 'entrada-list' %}" class="btn btn-light">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th class="bg-light">Data de Entrada:</th>
+                            <td>{{ entrada.data_entrada|date:"d/m/Y H:i" }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Produto:</th>
+                            <td>{{ entrada.produto }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Código do Produto:</th>
+                            <td>{{ entrada.codigo_produto }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Fabricante:</th>
+                            <td>{{ entrada.fabricante }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th class="bg-light">Quantidade:</th>
+                            <td>{{ entrada.quantidade }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Tipo de Embalagem:</th>
+                            <td>{{ entrada.tipo_embalagem }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Quantidade na Embalagem:</th>
+                            <td>{{ entrada.qtd_embalagem }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Valor Pago:</th>
+                            <td>R$ {{ entrada.valor_pago }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-light">Custo Unitário:</th>
+                            <td>R$ {{ entrada.custo_unitario }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            {% if entrada.observacoes %}
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Observações</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>{{ entrada.observacoes|linebreaks }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="mt-4 d-flex justify-content-between">
+                <a href="{% url 'admin:app_entradas_entradas_change' entrada.id %}" class="btn btn-warning">
+                    <i class="fas fa-edit"></i> Editar
+                </a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                    <i class="fas fa-trash-alt"></i> Excluir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmação de Exclusão -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteModalLabel">Confirmar Exclusão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir esta entrada? Esta ação não pode ser desfeita.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <form action="{% url 'admin:app_entradas_entradas_delete' entrada.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
