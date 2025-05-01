@@ -10,7 +10,6 @@
 </head>
 
 <style>
-
 :root {
     --azul-principal: #8ccbff;
     --azul-hover: #8ccbffa2;
@@ -18,22 +17,16 @@
     --cor-de-fundo: #F3F3F3;
 }
 
-
 /* Define o fundo cinza e o texto preto */
 body {
-    background-color: #F3F3F3;
+    background-color: var(--cor-de-fundo);
     color: black; /* Texto preto */
     height: 100vh; /* Altura total da viewport */
     justify-content: center;
     align-items: center;
 }
 
-.modal {
-    width: 300px;
-}
-
-.modal-content {
-    background-color: var(--azul-principal);
+#exampleModal {
     width: 300px;
 }
 
@@ -43,7 +36,6 @@ body {
 .list-group-item:hover {
     background-color: var(--azul-hover);
 }
-
 .nav-link {
     text-decoration: none;
     text-transform: none;
@@ -51,21 +43,28 @@ body {
     transition: all 0.2s;
 }
 
-/* Centraliza os botões e adiciona margens */
 .button-container {
         display: flex;
-        justify-content: center;
+        justify-content: end;
         flex-wrap: wrap;
+        padding-right: 5%;
+        margin: 0;
 }
 
-button {
+#menu {
         font-size: 1.2rem;
-        padding: 10px 20px;
-        width: 85%;
-        height: 100px;        
+        font-weight: bold;
+        width: 7%;
+        height: 30px;        
 }
 
+table {
+    margin: 0;
+}
 
+.table-group-divider {
+    color: #ffffff;   
+}
 
 </style>
 
@@ -87,67 +86,57 @@ button {
 
 
         
-        <!-- Modal Barra Lateral -->
+       <!-- Modal Barra Lateral -->
+       <div>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-dialog modal-fullscreen w-30">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-style modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" id="menu" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-style modal-body">
                     <!-- Lista de itens do menu -->
                     <ul class="list-group list-group-flush list-group-item-action active">
-                        <li class="list-group-item"><a href="inicio.html" class="nav-link">Início</a></li>
-                        <li class="list-group-item"><a href="produtos.html" class="nav-link">Produtos</a></li>
-                        <li class="list-group-item"><a href="entradas.html" class="nav-link">Entradas</a></li>
-                        <li class="list-group-item"><a href="saidas.html" class="nav-link">Saídas</a></li>
-                        <li class="list-group-item"><a href="vendas.html" class="nav-link">Vendas</a></li>
-                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li>
+                        <li class="list-group-item"><a href="inicio.html" class="nav-link" aria-label="Ir para a página inicial">Início</a></li>
+                        <li class="list-group-item"><a href="produtos.html" class="nav-link" aria-label="Ir para a página de produtos">Produtos</a></li>
+                        <li class="list-group-item"><a href="entradas.html" class="nav-link" aria-label="Ir para a página de entradas">Entradas</a></li>
+                        <li class="list-group-item"><a href="saidas.html" class="nav-link" aria-label="Ir para a página de saídas">Saídas</a></li>
+                        <li class="list-group-item"><a href="vendas.html" class="nav-link" aria-label="Ir para a página de vendas">Vendas</a></li>
+                        <li class="list-group-item"><a href="fabricantes.html" class="nav-link" aria-label="Ir para a página de fabricantes">Fabricantes</a></li>
+                        <li class="list-group-item"><a href="usuarios.html" class="nav-link" aria-label="Ir para a página de usuários">Usuários</a></li></li>
                         <li class="list-group-item"><a href="graficos.html" class="nav-link" aria-label="Ir para a página de gráficos e relatórios">Gráficos e relatórios</a></li></li>
-                        
-
-                        <li class="list-group-item"><a href="/projeto/projeto_Estoque/Arquivos_HTML/index.html" class="nav-link">Sair</a></li>
+                    
+                        <li class="list-group-item"><a href="index.html" class="nav-link" aria-label="Sair da sessão">Sair</a></li>
                       </ul>
                 </div>
             </div>
-            </div>
         </div>
+    </div>        
 
     </div>
       
 </header>
 
-<!-- Botões -->
+
 <body>
-    <div class="button-container">
-        <div class="row">
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/produtos" class="nav-link">Produtos</a></button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/entradas" class="nav-link">Entradas</a></button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/saidas" class="nav-link">Saídas</a></li></button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/vendas" class="nav-link">Vendas</a></button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/fornecedores" class="nav-link">Fornecedores</a></button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/usuarios" class="nav-link">Usuários</a></button>
-            </div>
-        </div>
+
+    <!-- Título da página -->
+    <div class="position-relative m-4">
+        <h2 class="titulo">Gráficos e Relatórios</h2>
     </div>
 
+    
+
+        
+
+    
+    
 
     <!-- Bootstrap JS -->
 
     <!-- <script type="text/javascript" src="script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        
+
 </body>
 </html>
