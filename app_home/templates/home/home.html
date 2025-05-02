@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Arquivos_HTML/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <title>Controle de Estoque</title>
 </head>
@@ -79,7 +79,7 @@ button {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="d-flex justify-content-between align-items-center navbar-text gap-2 m-2">
-                        <span><a href="inicio.html" class="nav-link">Início</a></span>
+                        <span><a href="/app_home/templates/home/home.html" class="nav-link">Início</a></span>
                     </div>
                 </div>
             </div>
@@ -98,17 +98,16 @@ button {
                 <div class="modal-body">
                     <!-- Lista de itens do menu -->
                     <ul class="list-group list-group-flush list-group-item-action active">
-                        <li class="list-group-item"><a href="inicio.html" class="nav-link">Início</a></li>
-                        <li class="list-group-item"><a href="produtos.html" class="nav-link">Produtos</a></li>
-                        <li class="list-group-item"><a href="entradas.html" class="nav-link">Entradas</a></li>
-                        <li class="list-group-item"><a href="saidas.html" class="nav-link">Saídas</a></li>
-                        <li class="list-group-item"><a href="vendas.html" class="nav-link">Vendas</a></li>
-                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li>
-                        <li class="list-group-item"><a href="graficos.html" class="nav-link" aria-label="Ir para a página de gráficos e relatórios">Gráficos e relatórios</a></li></li>
-                        
-
-                        <li class="list-group-item"><a href="/projeto/projeto_Estoque/Arquivos_HTML/index.html" class="nav-link">Sair</a></li>
-                      </ul>
+                        <li class="list-group-item"><a href="/app_home/templates/home/home.html" class="nav-link" aria-label="Ir para a página inicial">Início</a></li>
+                        <li class="list-group-item"><a href="/app_produtos/templates/produtos/produtos.html" class="nav-link" aria-label="Ir para a página de produtos">Produtos</a></li>
+                        <li class="list-group-item"><a href="/Arquivos_HTML/entradas.html" class="nav-link" aria-label="Ir para a página de entradas">Entradas</a></li>
+                        <li class="list-group-item"><a href="/Arquivos_HTML/saidas.html" class="nav-link" aria-label="Ir para a página de saídas">Saídas</a></li>
+                        <li class="list-group-item"><a href="/app_vendas/templates/vendas/vendas.html" class="nav-link" aria-label="Ir para a página de vendas">Vendas</a></li>
+                        <li class="list-group-item"><a href="/Arquivos_HTML/fabricantes.html" class="nav-link" aria-label="Ir para a página de fabricantes">Fabricantes</a></li>
+                        <li class="list-group-item"><a href="/Arquivos_HTML/usuarios.html" class="nav-link" aria-label="Ir para a página de usuários">Usuários</a></li>
+                        <li class="list-group-item"><a href="/Arquivos_HTML/graficos.html" class="nav-link" aria-label="Ir para a página de gráficos e relatórios">Gráficos e relatórios</a></li></li>
+                        <li class="list-group-item"><a href="/Arquivos_HTML/index.html" class="nav-link" aria-label="Sair da sessão">Sair</a></li>
+                    </ul>
                 </div>
             </div>
             </div>
@@ -120,25 +119,42 @@ button {
 
 <!-- Botões -->
 <body>
-    <div class="button-container">
+    <div class="button-container d-flex">
         <div class="row">
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/produtos" class="nav-link">Produtos</a></button>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de produtos">
+                    <a href="/app_produtos/templates/produtos/produtos.html" class="nav-link" alt="Produtos">Produtos</a>
+                </button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/entradas" class="nav-link">Entradas</a></button>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de entradas">
+                    <a href="/Arquivos_HTML/entradas.html" class="nav-link" alt="Entradas">Entradas</a>
+                </button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/saidas" class="nav-link">Saídas</a></li></button>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de saídas">
+                    <a href="/Arquivos_HTML/saidas.html" class="nav-link" alt="Saídas">Saídas</a>
+                </button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/vendas" class="nav-link">Vendas</a></button>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de vendas">
+                    <a href="/app_vendas/templates/vendas/vendas.html" class="nav-link" alt="Vendas">Vendas</a>
+                </button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/fornecedores" class="nav-link">Fornecedores</a></button>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de fabricantes">
+                    <a href="/Arquivos_HTML/fabricantes.html" class="nav-link" alt="Fabricantes">Fabricantes</a>
+                </button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="/usuarios" class="nav-link">Usuários</a></button>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de usuários">
+                    <a href="/Arquivos_HTML/usuarios.html" class="nav-link" alt="Usuários">Usuários</a>
+                </button>
+            </div>
+            <div class="col-6 bot_in">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2" aria-label="Ir para a página de gráficos e relatórios">
+                    <a href="/Arquivos_HTML/graficos.html" class="nav-link" alt="Gráficos e Relatórios">Gráficos & Relatórios</a>
+                </button>
             </div>
         </div>
     </div>
