@@ -66,6 +66,19 @@ table {
     color: #ffffff;   
 }
 
+img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
 </style>
 
 <!-- Barra de navegação superior -->
@@ -86,17 +99,17 @@ table {
 
 
         
-        <!-- Modal Barra Lateral -->
-        <div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen w-30">
-                <div class="modal-content">
-                    <div class="modal-style modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
-                    <button type="button" id="menu" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-style modal-body">
-                        <!-- Lista de itens do menu -->
+       <!-- Modal Barra Lateral -->
+       <div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen w-30">
+            <div class="modal-content">
+                <div class="modal-style modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
+                <button type="button" id="menu" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-style modal-body">
+                    <!-- Lista de itens do menu -->
                     <!-- Lista de itens do menu -->
                     <ul class="list-group list-group-flush list-group-item-action active">
                         <li class="list-group-item"><a href="/app_home/templates/home/home.html" class="nav-link" aria-label="Ir para a página inicial">Início</a></li>
@@ -109,12 +122,10 @@ table {
                         <li class="list-group-item"><a href="/Arquivos_HTML/graficos.html" class="nav-link" aria-label="Ir para a página de gráficos e relatórios">Gráficos e relatórios</a></li></li>
                         <li class="list-group-item"><a href="/Arquivos_HTML/index.html" class="nav-link" aria-label="Sair da sessão">Sair</a></li>
                     </ul>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
-        
+    </div>        
 
     </div>
       
@@ -125,57 +136,13 @@ table {
 
     <!-- Título da página -->
     <div class="position-relative m-4">
-        <h2 class="titulo">Cadastro de usuários</h2>
+        <h2 class="titulo">Gráficos e Relatórios</h2>
     </div>
 
-    <!-- Formulário de cadastro -->
-    <form class="formulario row g-3">
-        <!-- Nome -->
-        <div class="col-12">
-            <label class="form-label">Nome</label>
-            <input type="text" class="form-control">
-          </div>
-      
-        <!-- e-mail -->
-        <div class="col-md-8">
-            <label for="exampleFormControlInput1" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
-          </div>
-
-        <!-- Senha -->
-        <div class="col-md-4">
-            <label for="inputPassword" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="inputPassword">
-          </div>
     
-        <div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">Salvar</button>
-        </div>
-
-    </form> 
-
-        <!-- Modal save -->
-        <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title">Sucesso!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-
-                  <div class="modal-body">
-                    <p>Usuário cadastrado com sucesso!</p>
-                  </div>
-
-                  <div class="modal-footer">
-                    <a href="usuarios.html"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></a>
-                    <a href="cadusuarios.html"><button type="button" class="btn btn-primary">Novo cadastro</button></a>
-                  </div>
-                </div>
-            </div>
-        </div>
-
-    
+    <div>
+        <img src="img/dash.png" alt="dashboard">
+    </div>
     
 
     <!-- Bootstrap JS -->
