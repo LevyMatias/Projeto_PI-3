@@ -139,6 +139,35 @@ img {
         <h2 class="titulo">Gráficos e Relatórios</h2>
     </div>
 
+    <!-- Código do gráfico que deveria ser gerado 
+    <div>
+        <canvas id="Chart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('Chart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: {{label|safe}},
+            datasets: [{
+              label: '# of Votes',
+              data: {{data|safe}},
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script> -->
     
     <div>
         <img src="img/dash.png" alt="dashboard">

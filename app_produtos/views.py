@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Produto
 from . import forms
 
-
 def cad_produtos(request):
     form = forms.ProdutoForm()
     if request.method == 'POST':
@@ -25,3 +24,14 @@ def deletar_produto(request, id_produto):
     obj = Produto.objects.get(id_produto=id_produto)
     obj.delete()
     return redirect('produtos:lista_produtos')
+
+# # grafico
+# def grafico(request):
+#     labels = []
+#     data = []
+    
+#     queryset = Produto.objects.order_by('-quantidade')[:10]
+#     for produto in queryset:
+#         labels.append(produto.descricao)
+#         data.append(produto.quantidade)
+#     return render(request, 'Arquivos_HTML/graficos.html', {'labels': labels, 'data': data,})
